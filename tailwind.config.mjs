@@ -12,7 +12,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        figtree: ["Figtree", " serif"],
+        figtree: ["Figtree", "serif"],
         Bricolage: ["Bricolage Grotesque", "serif"],
         syne: ["var(--font-syne)", "sans-serif"],
       },
