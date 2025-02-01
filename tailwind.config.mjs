@@ -11,6 +11,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        figtree: ["Figtree", " serif"],
+        Bricolage: ["Bricolage Grotesque", "serif"],
+        syne: ["var(--font-syne)", "sans-serif"],
+      },
     },
   },
   plugins: [],
