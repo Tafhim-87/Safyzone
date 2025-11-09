@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import GeminiChat from "./GeminiChat";
 import Link from "next/link";
 import { 
   Facebook, 
@@ -218,6 +219,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <GeminiChat />
       </div>
 
       {/* WhatsApp Floating CTA */}

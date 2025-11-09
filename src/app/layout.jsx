@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/Components/comps/Navbar";
 import Footer from "@/Components/comps/Footer";
 import LenisProvider from "@/Components/comps/LenisProvider";
+import GeminiChat from "@/Components/comps/GeminiChat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
+          {/* <GeminiChat /> */}
         </LenisProvider>
       </body>
     </html>
