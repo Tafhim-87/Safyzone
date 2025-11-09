@@ -32,7 +32,7 @@ export default function SafyChatbot() {
       if (data.text) {
         setMessages((prev) => [...prev, { role: "assistant", content: data.text }]);
       } else {
-        setMessages((prev) => [...prev, { role: "assistant", content: "❌ Something went wrong." }]);
+        setMessages((prev) => [...prev, { role: "assistant", content: "Now I'm not able to answer this question." }]);
       }
     } catch (err) {
       console.error(err);
