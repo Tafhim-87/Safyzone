@@ -1,13 +1,13 @@
 import React from "react";
 
 const Business = () => {
-  const card = [
+  const cards = [
     {
       id: 1,
       title: "UI/UX Design",
       desc: "We are skilled in UI/UX design and web development. We do everything from user research, wireframing, simple and attractive UI design to development. Using Figma and modern technology, we complete each task easily and beautifully.",
       tags: [
-        "User Researching ",
+        "User Researching",
         "User Journey Mapping",
         "Wireframing",
         "User Interface Design",
@@ -48,7 +48,7 @@ const Business = () => {
     },
     {
       id: 4,
-      title: "2D Animation Gsap",
+      title: "2D Animation GSAP",
       desc: "2D Animation GSAP services create smooth animations for websites and digital media. Using the GSAP framework, they enhance user experience with seamless transitions and interactive effects.",
       tags: [
         "Storyboarding",
@@ -66,39 +66,50 @@ const Business = () => {
   ];
 
   return (
-    <section className="bg-[#FBF7FE] w-full flex justify-center items-center font-figtree py-10">
-      <div className="container flex flex-col gap-[60px] items-center">
-        <div className="w-[1080px] text-center flex flex-col gap-[16px]">
-          <h1 className="text-[40px] leading-[50px] font-extrabold font-Bricolage">
+    <section className="w-full bg-[#FBF7FE] py-16 md:py-20 lg:py-28 font-figtree overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] leading-tight font-extrabold font-Bricolage text-[#16141D]">
             The services we provide to improve your business
           </h1>
-          <p className="text-[20px] leading-[30px]">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
             We are skilled in UI/UX design and web development. We do everything
             from user research, wireframing, simple and attractive UI design to
             development. Using Figma and modern technology, we complete each
             task easily and beautifully.
           </p>
         </div>
-        <div className="container flex flex-wrap items-center justify-center gap-[24px]">
-          {/* card */}
-          {card.map((item, index) => (
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {cards.map((item) => (
             <div
-              key={index}
-              className="bg-[#FFFFFF] w-[638px] h-[452px] rounded-3xl p-6 flex flex-col gap-[24px]"
+              key={item.id}
+              className="group bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-transparent hover:border-[#5271FF]/20"
             >
-              <h1 className="font-Bricolage text-[30px] leading-[40px] font-extrabold">
-                {item.title}
-              </h1>
-              <p className="text-[16px] leading-[26px]">{item.desc}</p>
-              <div className="flex gap-3 flex-wrap">
-                {item.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-[#5271FF0F] py-2 px-3 rounded-md text-[16px] leading-[26px] text-[#5271FF] font-semibold"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex flex-col h-full">
+                {/* Title */}
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-Bricolage text-[#16141D] mb-4">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow mb-6">
+                  {item.desc}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 sm:gap-3">
+                  {item.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-[#5271FF0F] text-[#5271FF] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 group-hover:bg-[#5271FF] group-hover:text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

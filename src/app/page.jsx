@@ -3,12 +3,12 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-import Business from "@/Components/Business";
-import ChooseUs from "@/Components/ChooseUs";
-import HeroSection from "@/Components/HeroSection";
-import TestimonialSwipe from "@/Components/Testimonial";
-import { Tools } from "@/Components/Tools";
-import WorkShowcase from "@/Components/WorkShowCase";
+import Business from "@/Components/hero/Business";
+import ChooseUs from "@/Components/hero/ChooseUs";
+import HeroSection from "@/Components/hero/HeroSection";
+import TestimonialSwipe from "@/Components/hero/Testimonial";
+import { Tools } from "@/Components/hero/Tools";
+import WorkShowcase from "@/Components/hero/WorkShowCase";
 
 const Page = () => {
   useEffect(() => {
